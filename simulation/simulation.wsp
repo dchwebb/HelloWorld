@@ -1,0 +1,17 @@
+[COMPILESTATUS|.\..\top.v]
+FileTimeLow=30786141
+Status=Compiled
+
+[COMPILESTATUS|.\..\testbench.v]
+FileTimeLow=30786147
+Status=Compiled
+
+[General]
+CurrentVersion=103
+
+[CACHEDOC|Aldec.Project.Generic.7|.\simulation.adf|]
+Path=
+
+[Gui config]
+RunFor=100 ns
+

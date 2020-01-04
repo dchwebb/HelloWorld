@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliMessageLog>
+    <Task name="Lattice_Synthesis">
+        <Message>
+            <ID>35002000</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35001781</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>d:/docs/fpga/helloworld/top.v(1): </Dynamic>
+            <Dynamic>top</Dynamic>
+            <Navigation>d:/docs/fpga/helloworld/top.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/lscc/diamond/3.11_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo3l.v(1759): </Dynamic>
+            <Dynamic>OSCH(NOM_FREQ=&quot;133.00&quot;)</Dynamic>
+            <Navigation>C:/lscc/diamond/3.11_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo3l.v</Navigation>
+            <Navigation>1759</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>d:/docs/fpga/helloworld/top.v(12): </Dynamic>
+            <Dynamic>slow_counter</Dynamic>
+            <Navigation>d:/docs/fpga/helloworld/top.v</Navigation>
+            <Navigation>12</Navigation>
+        </Message>
+        <Message>
+            <ID>35001611</ID>
+            <Severity>Warning</Severity>
+        </Message>
+    </Task>
+    <Task name="PAR">
+        <Message>
+            <ID>61061008</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>pushbutton_c</Dynamic>
+            <Dynamic>Secondary</Dynamic>
+            <Dynamic>pushbutton</Dynamic>
+            <Dynamic>N2</Dynamic>
+            <Dynamic>Secondary</Dynamic>
+        </Message>
+    </Task>
+</BaliMessageLog>

@@ -1,0 +1,1 @@
+C:/lscc/diamond/3.11_x64/bin/nt64/moduleparser.exe -PROJ simulation -pf C:/lscc/diamond/3.11_x64/cae_library/synthesis/vhdl/machxo3l.vhd -lib machxo3l -pkg C:/lscc/diamond/3.11_x64/cae_library/vhdl_packages/vdbs -lst D:/docs/FPGA/HelloWorld/simulation/source_files.lst

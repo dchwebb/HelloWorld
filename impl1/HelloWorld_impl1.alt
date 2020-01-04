@@ -1,0 +1,17 @@
+NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
+NOTE All Rights Reserved *
+NOTE DATE CREATED: Sat Jan 04 15:26:14 2020 *
+NOTE DESIGN NAME: top *
+NOTE DEVICE NAME: LCMXO3LF-6900C-5CABGA256 *
+NOTE PIN ASSIGNMENTS *
+NOTE PINS leds[6] : N15 : out *
+NOTE PINS leds[7] : P16 : out *
+NOTE PINS leds[5] : L13 : out *
+NOTE PINS leds[4] : K11 : out *
+NOTE PINS leds[3] : L12 : out *
+NOTE PINS leds[2] : J11 : out *
+NOTE PINS leds[1] : J13 : out *
+NOTE PINS leds[0] : H11 : out *
+NOTE PINS pushbutton : N2 : in *
+NOTE CONFIGURATION MODE: NONE *
+NOTE COMPRESSION: on *

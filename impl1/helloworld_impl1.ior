@@ -1,0 +1,63 @@
+Loading design for application iotiming from file helloworld_impl1.ncd.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3LF-6900C
+Package:     CABGA256
+Performance: 6
+Package Status:                     Final          Version 1.16.
+Performance Hardware Data Status:   Final          Version 37.4.
+Loading design for application iotiming from file helloworld_impl1.ncd.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3LF-6900C
+Package:     CABGA256
+Performance: M
+Package Status:                     Final          Version 1.16.
+Performance Hardware Data Status:   Final          Version 37.4.
+// Design: top
+// Package: CABGA256
+// ncd File: helloworld_impl1.ncd
+// Version: Diamond (64-bit) 3.11.1.441
+// Written on Sat Jan 04 15:25:06 2020
+// M: Minimum Performance Grade
+// iotiming HelloWorld_impl1.ncd HelloWorld_impl1.prf -gui -msgset D:/docs/FPGA/HelloWorld/promote.xml
+
+I/O Timing Report (All units are in ns)
+
+Worst Case Results across Performance Grades (M, 6, 5):
+
+// Input Setup and Hold Times
+
+Port  Clock Edge  Setup Performance_Grade  Hold Performance_Grade
+----------------------------------------------------------------------
+(no input setup/hold data)
+
+
+// Clock to Output Delay
+
+Port  Clock Edge  Max_Delay Performance_Grade  Min_Delay Performance_Grade
+------------------------------------------------------------------------
+(no clock to output min/max data)
+
+
+// Internal_Clock to Input
+
+Port  Internal_Clock
+--------------------------------------------------------
+pushb fpga_clock    
+
+
+// Internal_Clock to Output
+
+Port    Internal_Clock
+--------------------------------------------------------
+leds[0] fpga_clock    
+leds[1] fpga_clock    
+leds[2] fpga_clock    
+leds[3] fpga_clock    
+leds[4] fpga_clock    
+leds[5] fpga_clock    
+leds[6] fpga_clock    
+leds[7] fpga_clock    

@@ -1,0 +1,27 @@
+Active-HDL 10.5.216.6767 2020-01-03 18:28:46
+
+Elaboration top modules:
+Verilog Module                testbench
+
+
+-----------------------------------------------------------------------------------------------
+Verilog Module          | Library      | Info | Compiler Version        | Compilation Options
+-----------------------------------------------------------------------------------------------
+testbench               | work         |      | 10.5.216.6767 (Windows) | -dbg -v2k5
+top                     | work         |      | 10.5.216.6767 (Windows) | -dbg -v2k5
+OSCH                    | ovi_machxo3l |      | 10.5.216.6767 (Windows) | -vendor lattice -v2k
+slow_counter            | work         |      | 10.5.216.6767 (Windows) | -dbg -v2k5
+-----------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------
+Library                 | Comment
+-----------------------------------------------------------------------------------------------
+ovi_machxo3l            | LATTICE Diamond 3.11, MACHXO3L VERILOG LIBRARY
+work                    | None
+-----------------------------------------------------------------------------------------------
+
+
+Simulation Options: vsim +access +r testbench -PL pmi_work -L ovi_machxo3l
+
+
+The performance of simulation is reduced. Version Lattice Edition

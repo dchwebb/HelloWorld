@@ -1,0 +1,83 @@
+# Design Explorer: Shortcut to "D:\docs\FPGA\HelloWorld\simulation\simulation.aws" design added.
+designverincludedir -clear
+designverlibrarysim -PL -clear
+designverlibrarysim -L -clear
+designverlibrarysim -PL pmi_work
+designverlibrarysim ovi_machxo3l
+designverdefinemacro -clear
+addfile D:/docs/FPGA/HelloWorld/top.v
+# Adding file D:\docs\FPGA\HelloWorld\top.v ... Done
+addfile D:/docs/FPGA/HelloWorld/testbench.v
+# Adding file D:\docs\FPGA\HelloWorld\testbench.v ... Done
+vlib D:/docs/FPGA/HelloWorld/simulation/work
+# Adding library O.K.
+adel -all
+# Library contents cleared.
+vlog -dbg -work work D:/docs/FPGA/HelloWorld/top.v
+# Pass 1. Scanning modules hierarchy.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# ELB/DAG code generating.
+# Unit top modules: top.
+# $root top modules: top.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+vlog -dbg -work work D:/docs/FPGA/HelloWorld/testbench.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module top found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: testbench.
+# $root top modules: testbench.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+module testbench
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: Module 'top' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'slow_counter' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+vsim +access +r testbench -PL pmi_work -L ovi_machxo3l
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: Module 'top' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: Module 'slow_counter' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELBREAD: Warning: ELBREAD_0054 top.v (8): Too few port connections. Region: /testbench/dut/rc_oscillator
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.7 [s]
+# SLP: Finished : 0.7 [s]
+# SLP: 3 (37.50%) primitives and 5 (62.50%) other processes in SLP
+# SLP: 17 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 1.0 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Lattice Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5534 kB (elbread=1280 elab2=4120 kernel=133 sdf=0)
+# KERNEL: ASDB file was created in location D:\docs\FPGA\HelloWorld\simulation\src\wave.asdb
+#  18:28, 03 January 2020
+#  Simulation has been initialized
+add wave *
+# 2 signal(s) traced.
+run 1000ns
+# Waveform file 'untitled.awc' connected to 'D:/docs/FPGA/HelloWorld/simulation/src/wave.asdb'.
+# KERNEL: stopped at time: 1 us
+run
+endsim
+# KERNEL: stopped at time: 379767903520 ps
+# VSIM: Simulation has finished.

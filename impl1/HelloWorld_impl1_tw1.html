@@ -1,0 +1,313 @@
+<HTML>
+<HEAD><TITLE>Lattice Map TRACE Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Map_Twr"></A><B><U><big>Map TRACE Report</big></U></B>
+
+Loading design for application trce from file helloworld_impl1_map.ncd.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3LF-6900C
+Package:     CABGA256
+Performance: 5
+Loading device for application trce from file 'xo3c6900.nph' in environment: C:/lscc/diamond/3.11_x64/ispfpga.
+Package Status:                     Final          Version 1.16.
+Performance Hardware Data Status:   Final          Version 37.4.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+<A name="Map_Twr_setup"></A><B><U><big>Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.11.1.441</big></U></B>
+Sat Jan 04 15:24:19 2020
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="mtw1_set_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o HelloWorld_impl1.tw1 -gui -msgset D:/docs/FPGA/HelloWorld/promote.xml HelloWorld_impl1_map.ncd HelloWorld_impl1.prf 
+Design file:     helloworld_impl1_map.ncd
+Preference file: helloworld_impl1.prf
+Device,speed:    LCMXO3LF-6900C,5
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+<A name="mtw1_set_ps"></A><B><U><big>Preference Summary</big></U></B>
+
+<LI><A href='#map_twr_pref_0_0' Target='right'>FREQUENCY NET "fpga_clock" 133.000000 MHz (0 errors)</A></LI>            536 items scored, 0 timing errors detected.
+Report:  223.714MHz is the maximum frequency for this preference.
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+<A name="map_twr_pref_0_0"></A>Preference: FREQUENCY NET "fpga_clock" 133.000000 MHz ;
+            536 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 3.049ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              counter/counter_10__i0  (from fpga_clock +)
+   Destination:    FF         Data in        counter/counter_10__i31  (to fpga_clock +)
+
+   Delay:               4.320ns  (90.3% logic, 9.7% route), 18 logic levels.
+
+ Constraint Details:
+
+      4.320ns physical path delay counter/SLICE_16 to counter/SLICE_0 meets
+      7.519ns delay constraint less
+      0.150ns DIN_SET requirement (totaling 7.369ns) by 3.049ns
+
+ Physical Path Details:
+
+      Data path counter/SLICE_16 to counter/SLICE_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409 */SLICE_16.CLK to *r/SLICE_16.Q1 counter/SLICE_16 (from fpga_clock)
+ROUTE         1   e 0.401 *r/SLICE_16.Q1 to *r/SLICE_16.A1 counter/n32
+C1TOFCO_DE  ---     0.786 *r/SLICE_16.A1 to */SLICE_16.FCO counter/SLICE_16
+ROUTE         1   e 0.001 */SLICE_16.FCO to */SLICE_15.FCI counter/n42
+FCITOFCO_D  ---     0.146 */SLICE_15.FCI to */SLICE_15.FCO counter/SLICE_15
+ROUTE         1   e 0.001 */SLICE_15.FCO to */SLICE_14.FCI counter/n43
+FCITOFCO_D  ---     0.146 */SLICE_14.FCI to */SLICE_14.FCO counter/SLICE_14
+ROUTE         1   e 0.001 */SLICE_14.FCO to */SLICE_13.FCI counter/n44
+FCITOFCO_D  ---     0.146 */SLICE_13.FCI to */SLICE_13.FCO counter/SLICE_13
+ROUTE         1   e 0.001 */SLICE_13.FCO to */SLICE_12.FCI counter/n45
+FCITOFCO_D  ---     0.146 */SLICE_12.FCI to */SLICE_12.FCO counter/SLICE_12
+ROUTE         1   e 0.001 */SLICE_12.FCO to */SLICE_11.FCI counter/n46
+FCITOFCO_D  ---     0.146 */SLICE_11.FCI to */SLICE_11.FCO counter/SLICE_11
+ROUTE         1   e 0.001 */SLICE_11.FCO to */SLICE_10.FCI counter/n47
+FCITOFCO_D  ---     0.146 */SLICE_10.FCI to */SLICE_10.FCO counter/SLICE_10
+ROUTE         1   e 0.001 */SLICE_10.FCO to *r/SLICE_9.FCI counter/n48
+FCITOFCO_D  ---     0.146 *r/SLICE_9.FCI to *r/SLICE_9.FCO counter/SLICE_9
+ROUTE         1   e 0.001 *r/SLICE_9.FCO to *r/SLICE_8.FCI counter/n49
+FCITOFCO_D  ---     0.146 *r/SLICE_8.FCI to *r/SLICE_8.FCO counter/SLICE_8
+ROUTE         1   e 0.001 *r/SLICE_8.FCO to *r/SLICE_7.FCI counter/n50
+FCITOFCO_D  ---     0.146 *r/SLICE_7.FCI to *r/SLICE_7.FCO counter/SLICE_7
+ROUTE         1   e 0.001 *r/SLICE_7.FCO to *r/SLICE_6.FCI counter/n51
+FCITOFCO_D  ---     0.146 *r/SLICE_6.FCI to *r/SLICE_6.FCO counter/SLICE_6
+ROUTE         1   e 0.001 *r/SLICE_6.FCO to *r/SLICE_5.FCI counter/n52
+FCITOFCO_D  ---     0.146 *r/SLICE_5.FCI to *r/SLICE_5.FCO counter/SLICE_5
+ROUTE         1   e 0.001 *r/SLICE_5.FCO to *r/SLICE_4.FCI counter/n53
+FCITOFCO_D  ---     0.146 *r/SLICE_4.FCI to *r/SLICE_4.FCO counter/SLICE_4
+ROUTE         1   e 0.001 *r/SLICE_4.FCO to *r/SLICE_3.FCI counter/n54
+FCITOFCO_D  ---     0.146 *r/SLICE_3.FCI to *r/SLICE_3.FCO counter/SLICE_3
+ROUTE         1   e 0.001 *r/SLICE_3.FCO to *r/SLICE_2.FCI counter/n55
+FCITOFCO_D  ---     0.146 *r/SLICE_2.FCI to *r/SLICE_2.FCO counter/SLICE_2
+ROUTE         1   e 0.001 *r/SLICE_2.FCO to *r/SLICE_1.FCI counter/n56
+FCITOFCO_D  ---     0.146 *r/SLICE_1.FCI to *r/SLICE_1.FCO counter/SLICE_1
+ROUTE         1   e 0.001 *r/SLICE_1.FCO to *r/SLICE_0.FCI counter/n57
+FCITOF0_DE  ---     0.517 *r/SLICE_0.FCI to *er/SLICE_0.F0 counter/SLICE_0
+ROUTE         1   e 0.001 *er/SLICE_0.F0 to *r/SLICE_0.DI0 counter/n134 (to fpga_clock)
+                  --------
+                    4.320   (90.3% logic, 9.7% route), 18 logic levels.
+
+Report:  223.714MHz is the maximum frequency for this preference.
+
+<A name="mtw1_set_rs"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "fpga_clock" 133.000000   |             |             |
+MHz ;                                   |  133.000 MHz|  223.714 MHz|  18  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+<A name="mtw1_set_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 1 clocks:
+
+Clock Domain: fpga_clock   Source: rc_oscillator.OSC   Loads: 21
+   Covered under: FREQUENCY NET "fpga_clock" 133.000000 MHz ;
+
+
+<A name="mtw1_set_ts"></A><B><U><big>Timing summary (Setup):</big></U></B>
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 536 paths, 1 nets, and 125 connections (85.62% coverage)
+
+--------------------------------------------------------------------------------
+<A name="Map_Twr_hold"></A><B><U><big>Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.11.1.441</big></U></B>
+Sat Jan 04 15:24:19 2020
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="mtw1_hold_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o HelloWorld_impl1.tw1 -gui -msgset D:/docs/FPGA/HelloWorld/promote.xml HelloWorld_impl1_map.ncd HelloWorld_impl1.prf 
+Design file:     helloworld_impl1_map.ncd
+Preference file: helloworld_impl1.prf
+Device,speed:    LCMXO3LF-6900C,M
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+<A name="mtw1_hold_ps"></A><B><U><big>Preference Summary</big></U></B>
+
+<LI><A href='#map_twr_pref_1_0' Target='right'>FREQUENCY NET "fpga_clock" 133.000000 MHz (0 errors)</A></LI>            536 items scored, 0 timing errors detected.
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+<A name="map_twr_pref_1_0"></A>Preference: FREQUENCY NET "fpga_clock" 133.000000 MHz ;
+            536 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.447ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              counter/counter_10__i24  (from fpga_clock +)
+   Destination:    FF         Data in        counter/counter_10__i24  (to fpga_clock +)
+
+   Delay:               0.434ns  (53.9% logic, 46.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.434ns physical path delay counter/SLICE_4 to counter/SLICE_4 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint requirement (totaling -0.013ns) by 0.447ns
+
+ Physical Path Details:
+
+      Data path counter/SLICE_4 to counter/SLICE_4:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133 *r/SLICE_4.CLK to *er/SLICE_4.Q1 counter/SLICE_4 (from fpga_clock)
+ROUTE         2   e 0.199 *er/SLICE_4.Q1 to *er/SLICE_4.A1 counter/counter_24
+CTOF_DEL    ---     0.101 *er/SLICE_4.A1 to *er/SLICE_4.F1 counter/SLICE_4
+ROUTE         1   e 0.001 *er/SLICE_4.F1 to *r/SLICE_4.DI1 counter/n141 (to fpga_clock)
+                  --------
+                    0.434   (53.9% logic, 46.1% route), 2 logic levels.
+
+<A name="mtw1_hold_rs"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "fpga_clock" 133.000000   |             |             |
+MHz ;                                   |     0.000 ns|     0.447 ns|   2  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+<A name="mtw1_hold_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 1 clocks:
+
+Clock Domain: fpga_clock   Source: rc_oscillator.OSC   Loads: 21
+   Covered under: FREQUENCY NET "fpga_clock" 133.000000 MHz ;
+
+
+<A name="mtw1_hold_ts"></A><B><U><big>Timing summary (Hold):</big></U></B>
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 536 paths, 1 nets, and 125 connections (85.62% coverage)
+
+
+
+<A name="mtw1_ts"></A><B><U><big>Timing summary (Setup and Hold):</big></U></B>
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

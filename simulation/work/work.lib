@@ -1,0 +1,46 @@
+timestamp=1578076126426
+
+[~A]
+D:/docs/FPGA/HelloWorld/testbench.v=0*2159*2586
+D:/docs/FPGA/HelloWorld/top.v=0*639*1300
+LastVerilogToplevel=testbench
+ModifyID=2
+Version=74
+
+[$root]
+A/$root=22|||1*2804
+BinI32/$root=3*1671
+SLP=3*1775
+Version=10.5.216.6767 (Windows)|0000000a789cd34d494a57d02d33ca360500104b02f0|c73a565f2ade592f8ac1c68f484c9216991da19447166b7961ede38db7b08dda
+
+[slow_counter]
+A/slow_counter=22|./../../top.v|12|1*1583
+BinI32/slow_counter=3*672
+R=./../../top.v|12
+SLP=3*1268
+Version=10.5.216.6767 (Windows)|0000000a789cd34d494a57d02d33ca360500104b02f0|d8189bf677aba98b63c243aa2c02721401d0770966935e54f3dec3e28c456a02590d20fd14d5948632c685e959cfc4ae
+
+[testbench]
+A/testbench=22|./../../testbench.v|3|1*3194
+BinI32/testbench=3*1843
+R=./../../testbench.v|3
+SLP=3*2270
+Version=10.5.216.6767 (Windows)|0000000a789cd34d494a57d02d33ca360500104b02f0|9c08cd30fe0f9550ac0d051aa32c9ba5030c5f4de3ffa3c97f58c5528f1d7913a3eb67f2972b73d5ebd20694f0e686f0
+
+[top]
+A/top=22|./../../top.v|1|1*374
+BinI32/top=3*172
+R=./../../top.v|1
+SLP=3*563
+Version=10.5.216.6767 (Windows)|0000000a789cd34d494a57d02d33ca360500104b02f0|f1fdecad8dc292011c024b8d633bc5c7c36b028dc4840837aa7063f47e598da0
+
+[~MFT]
+0=4|0work.mgf|2586|0
+1=3|1work.mgf|3194|374
+3=6|3work.mgf|2270|172
+
+[~U]
+$root=12|0*1794|
+slow_counter=12|0*412|
+testbench=12|0*1992||0x10
+top=12|0*182||0x10

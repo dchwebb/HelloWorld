@@ -1,0 +1,18 @@
+#Start recording tcl command: 1/3/2020 17:26:22
+#Project Location: D:/docs/FPGA/HelloWorld; Project name: HelloWorld
+prj_project new -name "HelloWorld" -impl "impl1" -dev LCMXO3LF-6900C-5BG256C -synthesis "lse"
+prj_project save
+prj_src add "D:/docs/FPGA/HelloWorld/top.v"
+prj_run Synthesis -impl impl1
+prj_run Synthesis -impl impl1
+prj_run Synthesis -impl impl1
+prj_run Synthesis -impl impl1
+prj_run Synthesis -impl impl1
+prj_run Synthesis -impl impl1
+prj_run PAR -impl impl1 -task PARTrace
+prj_run PAR -impl impl1 -task IOTiming
+prj_src add "D:/docs/FPGA/HelloWorld/testbench.v"
+prj_src syn_sim -src "D:/docs/FPGA/HelloWorld/testbench.v" SimulateOnly
+prj_src add "D:/docs/FPGA/HelloWorld/simulation/simulation.spf"
+prj_run Synthesis -impl impl1
+#Stop recording: 1/3/2020 21:12:15

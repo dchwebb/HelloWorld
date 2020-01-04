@@ -1,0 +1,1 @@
+-o D:/docs/FPGA/HelloWorld/simulation/compile -lc D:/docs/FPGA/HelloWorld/simulation/library.cfg -fl D:/docs/FPGA/HelloWorld/simulation/projlib.cfg -pli "C:/lscc/diamond/3.11_x64/active-hdl/bin/systf.dll" -epr D:/docs/FPGA/HelloWorld/simulation/compile/simulation.epr -dbg -work work D:/docs/FPGA/HelloWorld/testbench.v -v2k5 

@@ -1,0 +1,9 @@
+2
+~M 0 "" 0 $root
+~A 1 "" 0 $root
+~M 1 "./../../top.v" 12 slow_counter
+~A 1 "./../../top.v" 12 slow_counter
+~M 3 "./../../testbench.v" 3 testbench
+~A 1 "./../../testbench.v" 3 testbench
+~M 3 "./../../top.v" 1 top
+~A 1 "./../../top.v" 1 top

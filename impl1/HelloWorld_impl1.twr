@@ -1,0 +1,1343 @@
+
+Loading design for application trce from file helloworld_impl1.ncd.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3LF-6900C
+Package:     CABGA256
+Performance: 5
+Loading device for application trce from file 'xo3c6900.nph' in environment: C:/lscc/diamond/3.11_x64/ispfpga.
+Package Status:                     Final          Version 1.16.
+Performance Hardware Data Status:   Final          Version 37.4.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.11.1.441
+Sat Jan 04 15:25:05 2020
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 5 -sphld m -o HelloWorld_impl1.twr -gui -msgset D:/docs/FPGA/HelloWorld/promote.xml HelloWorld_impl1.ncd HelloWorld_impl1.prf 
+Design file:     helloworld_impl1.ncd
+Preference file: helloworld_impl1.prf
+Device,speed:    LCMXO3LF-6900C,5
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY NET "fpga_clock" 133.000000 MHz ;
+            536 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 2.888ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              counter/counter_10__i0  (from fpga_clock +)
+   Destination:    FF         Data in        counter/counter_10__i31  (to fpga_clock +)
+
+   Delay:               4.481ns  (87.1% logic, 12.9% route), 18 logic levels.
+
+ Constraint Details:
+
+      4.481ns physical path delay counter/SLICE_16 to counter/SLICE_0 meets
+      7.519ns delay constraint less
+      0.000ns skew and
+      0.150ns DIN_SET requirement (totaling 7.369ns) by 2.888ns
+
+ Physical Path Details:
+
+      Data path counter/SLICE_16 to counter/SLICE_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409    R19C36A.CLK to     R19C36A.Q1 counter/SLICE_16 (from fpga_clock)
+ROUTE         1     0.579     R19C36A.Q1 to     R19C36A.A1 counter/n32
+C1TOFCO_DE  ---     0.786     R19C36A.A1 to    R19C36A.FCO counter/SLICE_16
+ROUTE         1     0.000    R19C36A.FCO to    R19C36B.FCI counter/n42
+FCITOFCO_D  ---     0.146    R19C36B.FCI to    R19C36B.FCO counter/SLICE_15
+ROUTE         1     0.000    R19C36B.FCO to    R19C36C.FCI counter/n43
+FCITOFCO_D  ---     0.146    R19C36C.FCI to    R19C36C.FCO counter/SLICE_14
+ROUTE         1     0.000    R19C36C.FCO to    R19C36D.FCI counter/n44
+FCITOFCO_D  ---     0.146    R19C36D.FCI to    R19C36D.FCO counter/SLICE_13
+ROUTE         1     0.000    R19C36D.FCO to    R19C37A.FCI counter/n45
+FCITOFCO_D  ---     0.146    R19C37A.FCI to    R19C37A.FCO counter/SLICE_12
+ROUTE         1     0.000    R19C37A.FCO to    R19C37B.FCI counter/n46
+FCITOFCO_D  ---     0.146    R19C37B.FCI to    R19C37B.FCO counter/SLICE_11
+ROUTE         1     0.000    R19C37B.FCO to    R19C37C.FCI counter/n47
+FCITOFCO_D  ---     0.146    R19C37C.FCI to    R19C37C.FCO counter/SLICE_10
+ROUTE         1     0.000    R19C37C.FCO to    R19C37D.FCI counter/n48
+FCITOFCO_D  ---     0.146    R19C37D.FCI to    R19C37D.FCO counter/SLICE_9
+ROUTE         1     0.000    R19C37D.FCO to    R19C38A.FCI counter/n49
+FCITOFCO_D  ---     0.146    R19C38A.FCI to    R19C38A.FCO counter/SLICE_8
+ROUTE         1     0.000    R19C38A.FCO to    R19C38B.FCI counter/n50
+FCITOFCO_D  ---     0.146    R19C38B.FCI to    R19C38B.FCO counter/SLICE_7
+ROUTE         1     0.000    R19C38B.FCO to    R19C38C.FCI counter/n51
+FCITOFCO_D  ---     0.146    R19C38C.FCI to    R19C38C.FCO counter/SLICE_6
+ROUTE         1     0.000    R19C38C.FCO to    R19C38D.FCI counter/n52
+FCITOFCO_D  ---     0.146    R19C38D.FCI to    R19C38D.FCO counter/SLICE_5
+ROUTE         1     0.000    R19C38D.FCO to    R19C39A.FCI counter/n53
+FCITOFCO_D  ---     0.146    R19C39A.FCI to    R19C39A.FCO counter/SLICE_4
+ROUTE         1     0.000    R19C39A.FCO to    R19C39B.FCI counter/n54
+FCITOFCO_D  ---     0.146    R19C39B.FCI to    R19C39B.FCO counter/SLICE_3
+ROUTE         1     0.000    R19C39B.FCO to    R19C39C.FCI counter/n55
+FCITOFCO_D  ---     0.146    R19C39C.FCI to    R19C39C.FCO counter/SLICE_2
+ROUTE         1     0.000    R19C39C.FCO to    R19C39D.FCI counter/n56
+FCITOFCO_D  ---     0.146    R19C39D.FCI to    R19C39D.FCO counter/SLICE_1
+ROUTE         1     0.000    R19C39D.FCO to    R19C40A.FCI counter/n57
+FCITOF0_DE  ---     0.517    R19C40A.FCI to     R19C40A.F0 counter/SLICE_0
+ROUTE         1     0.000     R19C40A.F0 to    R19C40A.DI0 counter/n134 (to fpga_clock)
+                  --------
+                    4.481   (87.1% logic, 12.9% route), 18 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path rc_oscillator to counter/SLICE_16:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     3.765        OSC.OSC to    R19C36A.CLK fpga_clock
+                  --------
+                    3.765   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path rc_oscillator to counter/SLICE_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     3.765        OSC.OSC to    R19C40A.CLK fpga_clock
+                  --------
+                    3.765   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 2.915ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              counter/counter_10__i1  (from fpga_clock +)
+   Destination:    FF         Data in        counter/counter_10__i31  (to fpga_clock +)
+
+   Delay:               4.454ns  (87.0% logic, 13.0% route), 17 logic levels.
+
+ Constraint Details:
+
+      4.454ns physical path delay counter/SLICE_15 to counter/SLICE_0 meets
+      7.519ns delay constraint less
+      0.000ns skew and
+      0.150ns DIN_SET requirement (totaling 7.369ns) by 2.915ns
+
+ Physical Path Details:
+
+      Data path counter/SLICE_15 to counter/SLICE_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409    R19C36B.CLK to     R19C36B.Q0 counter/SLICE_15 (from fpga_clock)
+ROUTE         1     0.579     R19C36B.Q0 to     R19C36B.A0 counter/n31
+C0TOFCO_DE  ---     0.905     R19C36B.A0 to    R19C36B.FCO counter/SLICE_15
+ROUTE         1     0.000    R19C36B.FCO to    R19C36C.FCI counter/n43
+FCITOFCO_D  ---     0.146    R19C36C.FCI to    R19C36C.FCO counter/SLICE_14
+ROUTE         1     0.000    R19C36C.FCO to    R19C36D.FCI counter/n44
+FCITOFCO_D  ---     0.146    R19C36D.FCI to    R19C36D.FCO counter/SLICE_13
+ROUTE         1     0.000    R19C36D.FCO to    R19C37A.FCI counter/n45
+FCITOFCO_D  ---     0.146    R19C37A.FCI to    R19C37A.FCO counter/SLICE_12
+ROUTE         1     0.000    R19C37A.FCO to    R19C37B.FCI counter/n46
+FCITOFCO_D  ---     0.146    R19C37B.FCI to    R19C37B.FCO counter/SLICE_11
+ROUTE         1     0.000    R19C37B.FCO to    R19C37C.FCI counter/n47
+FCITOFCO_D  ---     0.146    R19C37C.FCI to    R19C37C.FCO counter/SLICE_10
+ROUTE         1     0.000    R19C37C.FCO to    R19C37D.FCI counter/n48
+FCITOFCO_D  ---     0.146    R19C37D.FCI to    R19C37D.FCO counter/SLICE_9
+ROUTE         1     0.000    R19C37D.FCO to    R19C38A.FCI counter/n49
+FCITOFCO_D  ---     0.146    R19C38A.FCI to    R19C38A.FCO counter/SLICE_8
+ROUTE         1     0.000    R19C38A.FCO to    R19C38B.FCI counter/n50
+FCITOFCO_D  ---     0.146    R19C38B.FCI to    R19C38B.FCO counter/SLICE_7
+ROUTE         1     0.000    R19C38B.FCO to    R19C38C.FCI counter/n51
+FCITOFCO_D  ---     0.146    R19C38C.FCI to    R19C38C.FCO counter/SLICE_6
+ROUTE         1     0.000    R19C38C.FCO to    R19C38D.FCI counter/n52
+FCITOFCO_D  ---     0.146    R19C38D.FCI to    R19C38D.FCO counter/SLICE_5
+ROUTE         1     0.000    R19C38D.FCO to    R19C39A.FCI counter/n53
+FCITOFCO_D  ---     0.146    R19C39A.FCI to    R19C39A.FCO counter/SLICE_4
+ROUTE         1     0.000    R19C39A.FCO to    R19C39B.FCI counter/n54
+FCITOFCO_D  ---     0.146    R19C39B.FCI to    R19C39B.FCO counter/SLICE_3
+ROUTE         1     0.000    R19C39B.FCO to    R19C39C.FCI counter/n55
+FCITOFCO_D  ---     0.146    R19C39C.FCI to    R19C39C.FCO counter/SLICE_2
+ROUTE         1     0.000    R19C39C.FCO to    R19C39D.FCI counter/n56
+FCITOFCO_D  ---     0.146    R19C39D.FCI to    R19C39D.FCO counter/SLICE_1
+ROUTE         1     0.000    R19C39D.FCO to    R19C40A.FCI counter/n57
+FCITOF0_DE  ---     0.517    R19C40A.FCI to     R19C40A.F0 counter/SLICE_0
+ROUTE         1     0.000     R19C40A.F0 to    R19C40A.DI0 counter/n134 (to fpga_clock)
+                  --------
+                    4.454   (87.0% logic, 13.0% route), 17 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path rc_oscillator to counter/SLICE_15:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     3.765        OSC.OSC to    R19C36B.CLK fpga_clock
+                  --------
+                    3.765   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path rc_oscillator to counter/SLICE_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     3.765        OSC.OSC to    R19C40A.CLK fpga_clock
+                  --------
+                    3.765   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 2.982ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              counter/counter_10__i0  (from fpga_clock +)
+   Destination:    FF         Data in        counter/counter_10__i30  (to fpga_clock +)
+
+   Delay:               4.387ns  (86.8% logic, 13.2% route), 17 logic levels.
+
+ Constraint Details:
+
+      4.387ns physical path delay counter/SLICE_16 to counter/SLICE_1 meets
+      7.519ns delay constraint less
+      0.000ns skew and
+      0.150ns DIN_SET requirement (totaling 7.369ns) by 2.982ns
+
+ Physical Path Details:
+
+      Data path counter/SLICE_16 to counter/SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409    R19C36A.CLK to     R19C36A.Q1 counter/SLICE_16 (from fpga_clock)
+ROUTE         1     0.579     R19C36A.Q1 to     R19C36A.A1 counter/n32
+C1TOFCO_DE  ---     0.786     R19C36A.A1 to    R19C36A.FCO counter/SLICE_16
+ROUTE         1     0.000    R19C36A.FCO to    R19C36B.FCI counter/n42
+FCITOFCO_D  ---     0.146    R19C36B.FCI to    R19C36B.FCO counter/SLICE_15
+ROUTE         1     0.000    R19C36B.FCO to    R19C36C.FCI counter/n43
+FCITOFCO_D  ---     0.146    R19C36C.FCI to    R19C36C.FCO counter/SLICE_14
+ROUTE         1     0.000    R19C36C.FCO to    R19C36D.FCI counter/n44
+FCITOFCO_D  ---     0.146    R19C36D.FCI to    R19C36D.FCO counter/SLICE_13
+ROUTE         1     0.000    R19C36D.FCO to    R19C37A.FCI counter/n45
+FCITOFCO_D  ---     0.146    R19C37A.FCI to    R19C37A.FCO counter/SLICE_12
+ROUTE         1     0.000    R19C37A.FCO to    R19C37B.FCI counter/n46
+FCITOFCO_D  ---     0.146    R19C37B.FCI to    R19C37B.FCO counter/SLICE_11
+ROUTE         1     0.000    R19C37B.FCO to    R19C37C.FCI counter/n47
+FCITOFCO_D  ---     0.146    R19C37C.FCI to    R19C37C.FCO counter/SLICE_10
+ROUTE         1     0.000    R19C37C.FCO to    R19C37D.FCI counter/n48
+FCITOFCO_D  ---     0.146    R19C37D.FCI to    R19C37D.FCO counter/SLICE_9
+ROUTE         1     0.000    R19C37D.FCO to    R19C38A.FCI counter/n49
+FCITOFCO_D  ---     0.146    R19C38A.FCI to    R19C38A.FCO counter/SLICE_8
+ROUTE         1     0.000    R19C38A.FCO to    R19C38B.FCI counter/n50
+FCITOFCO_D  ---     0.146    R19C38B.FCI to    R19C38B.FCO counter/SLICE_7
+ROUTE         1     0.000    R19C38B.FCO to    R19C38C.FCI counter/n51
+FCITOFCO_D  ---     0.146    R19C38C.FCI to    R19C38C.FCO counter/SLICE_6
+ROUTE         1     0.000    R19C38C.FCO to    R19C38D.FCI counter/n52
+FCITOFCO_D  ---     0.146    R19C38D.FCI to    R19C38D.FCO counter/SLICE_5
+ROUTE         1     0.000    R19C38D.FCO to    R19C39A.FCI counter/n53
+FCITOFCO_D  ---     0.146    R19C39A.FCI to    R19C39A.FCO counter/SLICE_4
+ROUTE         1     0.000    R19C39A.FCO to    R19C39B.FCI counter/n54
+FCITOFCO_D  ---     0.146    R19C39B.FCI to    R19C39B.FCO counter/SLICE_3
+ROUTE         1     0.000    R19C39B.FCO to    R19C39C.FCI counter/n55
+FCITOFCO_D  ---     0.146    R19C39C.FCI to    R19C39C.FCO counter/SLICE_2
+ROUTE         1     0.000    R19C39C.FCO to    R19C39D.FCI counter/n56
+FCITOF1_DE  ---     0.569    R19C39D.FCI to     R19C39D.F1 counter/SLICE_1
+ROUTE         1     0.000     R19C39D.F1 to    R19C39D.DI1 counter/n135 (to fpga_clock)
+                  --------
+                    4.387   (86.8% logic, 13.2% route), 17 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path rc_oscillator to counter/SLICE_16:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     3.765        OSC.OSC to    R19C36A.CLK fpga_clock
+                  --------
+                    3.765   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path rc_oscillator to counter/SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     3.765        OSC.OSC to    R19C39D.CLK fpga_clock
+                  --------
+                    3.765   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 3.009ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              counter/counter_10__i1  (from fpga_clock +)
+   Destination:    FF         Data in        counter/counter_10__i30  (to fpga_clock +)
+
+   Delay:               4.360ns  (86.7% logic, 13.3% route), 16 logic levels.
+
+ Constraint Details:
+
+      4.360ns physical path delay counter/SLICE_15 to counter/SLICE_1 meets
+      7.519ns delay constraint less
+      0.000ns skew and
+      0.150ns DIN_SET requirement (totaling 7.369ns) by 3.009ns
+
+ Physical Path Details:
+
+      Data path counter/SLICE_15 to counter/SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409    R19C36B.CLK to     R19C36B.Q0 counter/SLICE_15 (from fpga_clock)
+ROUTE         1     0.579     R19C36B.Q0 to     R19C36B.A0 counter/n31
+C0TOFCO_DE  ---     0.905     R19C36B.A0 to    R19C36B.FCO counter/SLICE_15
+ROUTE         1     0.000    R19C36B.FCO to    R19C36C.FCI counter/n43
+FCITOFCO_D  ---     0.146    R19C36C.FCI to    R19C36C.FCO counter/SLICE_14
+ROUTE         1     0.000    R19C36C.FCO to    R19C36D.FCI counter/n44
+FCITOFCO_D  ---     0.146    R19C36D.FCI to    R19C36D.FCO counter/SLICE_13
+ROUTE         1     0.000    R19C36D.FCO to    R19C37A.FCI counter/n45
+FCITOFCO_D  ---     0.146    R19C37A.FCI to    R19C37A.FCO counter/SLICE_12
+ROUTE         1     0.000    R19C37A.FCO to    R19C37B.FCI counter/n46
+FCITOFCO_D  ---     0.146    R19C37B.FCI to    R19C37B.FCO counter/SLICE_11
+ROUTE         1     0.000    R19C37B.FCO to    R19C37C.FCI counter/n47
+FCITOFCO_D  ---     0.146    R19C37C.FCI to    R19C37C.FCO counter/SLICE_10
+ROUTE         1     0.000    R19C37C.FCO to    R19C37D.FCI counter/n48
+FCITOFCO_D  ---     0.146    R19C37D.FCI to    R19C37D.FCO counter/SLICE_9
+ROUTE         1     0.000    R19C37D.FCO to    R19C38A.FCI counter/n49
+FCITOFCO_D  ---     0.146    R19C38A.FCI to    R19C38A.FCO counter/SLICE_8
+ROUTE         1     0.000    R19C38A.FCO to    R19C38B.FCI counter/n50
+FCITOFCO_D  ---     0.146    R19C38B.FCI to    R19C38B.FCO counter/SLICE_7
+ROUTE         1     0.000    R19C38B.FCO to    R19C38C.FCI counter/n51
+FCITOFCO_D  ---     0.146    R19C38C.FCI to    R19C38C.FCO counter/SLICE_6
+ROUTE         1     0.000    R19C38C.FCO to    R19C38D.FCI counter/n52
+FCITOFCO_D  ---     0.146    R19C38D.FCI to    R19C38D.FCO counter/SLICE_5
+ROUTE         1     0.000    R19C38D.FCO to    R19C39A.FCI counter/n53
+FCITOFCO_D  ---     0.146    R19C39A.FCI to    R19C39A.FCO counter/SLICE_4
+ROUTE         1     0.000    R19C39A.FCO to    R19C39B.FCI counter/n54
+FCITOFCO_D  ---     0.146    R19C39B.FCI to    R19C39B.FCO counter/SLICE_3
+ROUTE         1     0.000    R19C39B.FCO to    R19C39C.FCI counter/n55
+FCITOFCO_D  ---     0.146    R19C39C.FCI to    R19C39C.FCO counter/SLICE_2
+ROUTE         1     0.000    R19C39C.FCO to    R19C39D.FCI counter/n56
+FCITOF1_DE  ---     0.569    R19C39D.FCI to     R19C39D.F1 counter/SLICE_1
+ROUTE         1     0.000     R19C39D.F1 to    R19C39D.DI1 counter/n135 (to fpga_clock)
+                  --------
+                    4.360   (86.7% logic, 13.3% route), 16 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path rc_oscillator to counter/SLICE_15:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     3.765        OSC.OSC to    R19C36B.CLK fpga_clock
+                  --------
+                    3.765   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path rc_oscillator to counter/SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     3.765        OSC.OSC to    R19C39D.CLK fpga_clock
+                  --------
+                    3.765   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 3.034ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              counter/counter_10__i2  (from fpga_clock +)
+   Destination:    FF         Data in        counter/counter_10__i31  (to fpga_clock +)
+
+   Delay:               4.335ns  (86.6% logic, 13.4% route), 17 logic levels.
+
+ Constraint Details:
+
+      4.335ns physical path delay counter/SLICE_15 to counter/SLICE_0 meets
+      7.519ns delay constraint less
+      0.000ns skew and
+      0.150ns DIN_SET requirement (totaling 7.369ns) by 3.034ns
+
+ Physical Path Details:
+
+      Data path counter/SLICE_15 to counter/SLICE_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409    R19C36B.CLK to     R19C36B.Q1 counter/SLICE_15 (from fpga_clock)
+ROUTE         1     0.579     R19C36B.Q1 to     R19C36B.A1 counter/n30
+C1TOFCO_DE  ---     0.786     R19C36B.A1 to    R19C36B.FCO counter/SLICE_15
+ROUTE         1     0.000    R19C36B.FCO to    R19C36C.FCI counter/n43
+FCITOFCO_D  ---     0.146    R19C36C.FCI to    R19C36C.FCO counter/SLICE_14
+ROUTE         1     0.000    R19C36C.FCO to    R19C36D.FCI counter/n44
+FCITOFCO_D  ---     0.146    R19C36D.FCI to    R19C36D.FCO counter/SLICE_13
+ROUTE         1     0.000    R19C36D.FCO to    R19C37A.FCI counter/n45
+FCITOFCO_D  ---     0.146    R19C37A.FCI to    R19C37A.FCO counter/SLICE_12
+ROUTE         1     0.000    R19C37A.FCO to    R19C37B.FCI counter/n46
+FCITOFCO_D  ---     0.146    R19C37B.FCI to    R19C37B.FCO counter/SLICE_11
+ROUTE         1     0.000    R19C37B.FCO to    R19C37C.FCI counter/n47
+FCITOFCO_D  ---     0.146    R19C37C.FCI to    R19C37C.FCO counter/SLICE_10
+ROUTE         1     0.000    R19C37C.FCO to    R19C37D.FCI counter/n48
+FCITOFCO_D  ---     0.146    R19C37D.FCI to    R19C37D.FCO counter/SLICE_9
+ROUTE         1     0.000    R19C37D.FCO to    R19C38A.FCI counter/n49
+FCITOFCO_D  ---     0.146    R19C38A.FCI to    R19C38A.FCO counter/SLICE_8
+ROUTE         1     0.000    R19C38A.FCO to    R19C38B.FCI counter/n50
+FCITOFCO_D  ---     0.146    R19C38B.FCI to    R19C38B.FCO counter/SLICE_7
+ROUTE         1     0.000    R19C38B.FCO to    R19C38C.FCI counter/n51
+FCITOFCO_D  ---     0.146    R19C38C.FCI to    R19C38C.FCO counter/SLICE_6
+ROUTE         1     0.000    R19C38C.FCO to    R19C38D.FCI counter/n52
+FCITOFCO_D  ---     0.146    R19C38D.FCI to    R19C38D.FCO counter/SLICE_5
+ROUTE         1     0.000    R19C38D.FCO to    R19C39A.FCI counter/n53
+FCITOFCO_D  ---     0.146    R19C39A.FCI to    R19C39A.FCO counter/SLICE_4
+ROUTE         1     0.000    R19C39A.FCO to    R19C39B.FCI counter/n54
+FCITOFCO_D  ---     0.146    R19C39B.FCI to    R19C39B.FCO counter/SLICE_3
+ROUTE         1     0.000    R19C39B.FCO to    R19C39C.FCI counter/n55
+FCITOFCO_D  ---     0.146    R19C39C.FCI to    R19C39C.FCO counter/SLICE_2
+ROUTE         1     0.000    R19C39C.FCO to    R19C39D.FCI counter/n56
+FCITOFCO_D  ---     0.146    R19C39D.FCI to    R19C39D.FCO counter/SLICE_1
+ROUTE         1     0.000    R19C39D.FCO to    R19C40A.FCI counter/n57
+FCITOF0_DE  ---     0.517    R19C40A.FCI to     R19C40A.F0 counter/SLICE_0
+ROUTE         1     0.000     R19C40A.F0 to    R19C40A.DI0 counter/n134 (to fpga_clock)
+                  --------
+                    4.335   (86.6% logic, 13.4% route), 17 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path rc_oscillator to counter/SLICE_15:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     3.765        OSC.OSC to    R19C36B.CLK fpga_clock
+                  --------
+                    3.765   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path rc_oscillator to counter/SLICE_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     3.765        OSC.OSC to    R19C40A.CLK fpga_clock
+                  --------
+                    3.765   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 3.034ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              counter/counter_10__i0  (from fpga_clock +)
+   Destination:    FF         Data in        counter/counter_10__i29  (to fpga_clock +)
+
+   Delay:               4.335ns  (86.6% logic, 13.4% route), 17 logic levels.
+
+ Constraint Details:
+
+      4.335ns physical path delay counter/SLICE_16 to counter/SLICE_1 meets
+      7.519ns delay constraint less
+      0.000ns skew and
+      0.150ns DIN_SET requirement (totaling 7.369ns) by 3.034ns
+
+ Physical Path Details:
+
+      Data path counter/SLICE_16 to counter/SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409    R19C36A.CLK to     R19C36A.Q1 counter/SLICE_16 (from fpga_clock)
+ROUTE         1     0.579     R19C36A.Q1 to     R19C36A.A1 counter/n32
+C1TOFCO_DE  ---     0.786     R19C36A.A1 to    R19C36A.FCO counter/SLICE_16
+ROUTE         1     0.000    R19C36A.FCO to    R19C36B.FCI counter/n42
+FCITOFCO_D  ---     0.146    R19C36B.FCI to    R19C36B.FCO counter/SLICE_15
+ROUTE         1     0.000    R19C36B.FCO to    R19C36C.FCI counter/n43
+FCITOFCO_D  ---     0.146    R19C36C.FCI to    R19C36C.FCO counter/SLICE_14
+ROUTE         1     0.000    R19C36C.FCO to    R19C36D.FCI counter/n44
+FCITOFCO_D  ---     0.146    R19C36D.FCI to    R19C36D.FCO counter/SLICE_13
+ROUTE         1     0.000    R19C36D.FCO to    R19C37A.FCI counter/n45
+FCITOFCO_D  ---     0.146    R19C37A.FCI to    R19C37A.FCO counter/SLICE_12
+ROUTE         1     0.000    R19C37A.FCO to    R19C37B.FCI counter/n46
+FCITOFCO_D  ---     0.146    R19C37B.FCI to    R19C37B.FCO counter/SLICE_11
+ROUTE         1     0.000    R19C37B.FCO to    R19C37C.FCI counter/n47
+FCITOFCO_D  ---     0.146    R19C37C.FCI to    R19C37C.FCO counter/SLICE_10
+ROUTE         1     0.000    R19C37C.FCO to    R19C37D.FCI counter/n48
+FCITOFCO_D  ---     0.146    R19C37D.FCI to    R19C37D.FCO counter/SLICE_9
+ROUTE         1     0.000    R19C37D.FCO to    R19C38A.FCI counter/n49
+FCITOFCO_D  ---     0.146    R19C38A.FCI to    R19C38A.FCO counter/SLICE_8
+ROUTE         1     0.000    R19C38A.FCO to    R19C38B.FCI counter/n50
+FCITOFCO_D  ---     0.146    R19C38B.FCI to    R19C38B.FCO counter/SLICE_7
+ROUTE         1     0.000    R19C38B.FCO to    R19C38C.FCI counter/n51
+FCITOFCO_D  ---     0.146    R19C38C.FCI to    R19C38C.FCO counter/SLICE_6
+ROUTE         1     0.000    R19C38C.FCO to    R19C38D.FCI counter/n52
+FCITOFCO_D  ---     0.146    R19C38D.FCI to    R19C38D.FCO counter/SLICE_5
+ROUTE         1     0.000    R19C38D.FCO to    R19C39A.FCI counter/n53
+FCITOFCO_D  ---     0.146    R19C39A.FCI to    R19C39A.FCO counter/SLICE_4
+ROUTE         1     0.000    R19C39A.FCO to    R19C39B.FCI counter/n54
+FCITOFCO_D  ---     0.146    R19C39B.FCI to    R19C39B.FCO counter/SLICE_3
+ROUTE         1     0.000    R19C39B.FCO to    R19C39C.FCI counter/n55
+FCITOFCO_D  ---     0.146    R19C39C.FCI to    R19C39C.FCO counter/SLICE_2
+ROUTE         1     0.000    R19C39C.FCO to    R19C39D.FCI counter/n56
+FCITOF0_DE  ---     0.517    R19C39D.FCI to     R19C39D.F0 counter/SLICE_1
+ROUTE         1     0.000     R19C39D.F0 to    R19C39D.DI0 counter/n136 (to fpga_clock)
+                  --------
+                    4.335   (86.6% logic, 13.4% route), 17 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path rc_oscillator to counter/SLICE_16:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     3.765        OSC.OSC to    R19C36A.CLK fpga_clock
+                  --------
+                    3.765   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path rc_oscillator to counter/SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     3.765        OSC.OSC to    R19C39D.CLK fpga_clock
+                  --------
+                    3.765   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 3.061ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              counter/counter_10__i1  (from fpga_clock +)
+   Destination:    FF         Data in        counter/counter_10__i29  (to fpga_clock +)
+
+   Delay:               4.308ns  (86.6% logic, 13.4% route), 16 logic levels.
+
+ Constraint Details:
+
+      4.308ns physical path delay counter/SLICE_15 to counter/SLICE_1 meets
+      7.519ns delay constraint less
+      0.000ns skew and
+      0.150ns DIN_SET requirement (totaling 7.369ns) by 3.061ns
+
+ Physical Path Details:
+
+      Data path counter/SLICE_15 to counter/SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409    R19C36B.CLK to     R19C36B.Q0 counter/SLICE_15 (from fpga_clock)
+ROUTE         1     0.579     R19C36B.Q0 to     R19C36B.A0 counter/n31
+C0TOFCO_DE  ---     0.905     R19C36B.A0 to    R19C36B.FCO counter/SLICE_15
+ROUTE         1     0.000    R19C36B.FCO to    R19C36C.FCI counter/n43
+FCITOFCO_D  ---     0.146    R19C36C.FCI to    R19C36C.FCO counter/SLICE_14
+ROUTE         1     0.000    R19C36C.FCO to    R19C36D.FCI counter/n44
+FCITOFCO_D  ---     0.146    R19C36D.FCI to    R19C36D.FCO counter/SLICE_13
+ROUTE         1     0.000    R19C36D.FCO to    R19C37A.FCI counter/n45
+FCITOFCO_D  ---     0.146    R19C37A.FCI to    R19C37A.FCO counter/SLICE_12
+ROUTE         1     0.000    R19C37A.FCO to    R19C37B.FCI counter/n46
+FCITOFCO_D  ---     0.146    R19C37B.FCI to    R19C37B.FCO counter/SLICE_11
+ROUTE         1     0.000    R19C37B.FCO to    R19C37C.FCI counter/n47
+FCITOFCO_D  ---     0.146    R19C37C.FCI to    R19C37C.FCO counter/SLICE_10
+ROUTE         1     0.000    R19C37C.FCO to    R19C37D.FCI counter/n48
+FCITOFCO_D  ---     0.146    R19C37D.FCI to    R19C37D.FCO counter/SLICE_9
+ROUTE         1     0.000    R19C37D.FCO to    R19C38A.FCI counter/n49
+FCITOFCO_D  ---     0.146    R19C38A.FCI to    R19C38A.FCO counter/SLICE_8
+ROUTE         1     0.000    R19C38A.FCO to    R19C38B.FCI counter/n50
+FCITOFCO_D  ---     0.146    R19C38B.FCI to    R19C38B.FCO counter/SLICE_7
+ROUTE         1     0.000    R19C38B.FCO to    R19C38C.FCI counter/n51
+FCITOFCO_D  ---     0.146    R19C38C.FCI to    R19C38C.FCO counter/SLICE_6
+ROUTE         1     0.000    R19C38C.FCO to    R19C38D.FCI counter/n52
+FCITOFCO_D  ---     0.146    R19C38D.FCI to    R19C38D.FCO counter/SLICE_5
+ROUTE         1     0.000    R19C38D.FCO to    R19C39A.FCI counter/n53
+FCITOFCO_D  ---     0.146    R19C39A.FCI to    R19C39A.FCO counter/SLICE_4
+ROUTE         1     0.000    R19C39A.FCO to    R19C39B.FCI counter/n54
+FCITOFCO_D  ---     0.146    R19C39B.FCI to    R19C39B.FCO counter/SLICE_3
+ROUTE         1     0.000    R19C39B.FCO to    R19C39C.FCI counter/n55
+FCITOFCO_D  ---     0.146    R19C39C.FCI to    R19C39C.FCO counter/SLICE_2
+ROUTE         1     0.000    R19C39C.FCO to    R19C39D.FCI counter/n56
+FCITOF0_DE  ---     0.517    R19C39D.FCI to     R19C39D.F0 counter/SLICE_1
+ROUTE         1     0.000     R19C39D.F0 to    R19C39D.DI0 counter/n136 (to fpga_clock)
+                  --------
+                    4.308   (86.6% logic, 13.4% route), 16 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path rc_oscillator to counter/SLICE_15:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     3.765        OSC.OSC to    R19C36B.CLK fpga_clock
+                  --------
+                    3.765   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path rc_oscillator to counter/SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     3.765        OSC.OSC to    R19C39D.CLK fpga_clock
+                  --------
+                    3.765   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 3.061ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              counter/counter_10__i3  (from fpga_clock +)
+   Destination:    FF         Data in        counter/counter_10__i31  (to fpga_clock +)
+
+   Delay:               4.308ns  (86.6% logic, 13.4% route), 16 logic levels.
+
+ Constraint Details:
+
+      4.308ns physical path delay counter/SLICE_14 to counter/SLICE_0 meets
+      7.519ns delay constraint less
+      0.000ns skew and
+      0.150ns DIN_SET requirement (totaling 7.369ns) by 3.061ns
+
+ Physical Path Details:
+
+      Data path counter/SLICE_14 to counter/SLICE_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409    R19C36C.CLK to     R19C36C.Q0 counter/SLICE_14 (from fpga_clock)
+ROUTE         1     0.579     R19C36C.Q0 to     R19C36C.A0 counter/n29
+C0TOFCO_DE  ---     0.905     R19C36C.A0 to    R19C36C.FCO counter/SLICE_14
+ROUTE         1     0.000    R19C36C.FCO to    R19C36D.FCI counter/n44
+FCITOFCO_D  ---     0.146    R19C36D.FCI to    R19C36D.FCO counter/SLICE_13
+ROUTE         1     0.000    R19C36D.FCO to    R19C37A.FCI counter/n45
+FCITOFCO_D  ---     0.146    R19C37A.FCI to    R19C37A.FCO counter/SLICE_12
+ROUTE         1     0.000    R19C37A.FCO to    R19C37B.FCI counter/n46
+FCITOFCO_D  ---     0.146    R19C37B.FCI to    R19C37B.FCO counter/SLICE_11
+ROUTE         1     0.000    R19C37B.FCO to    R19C37C.FCI counter/n47
+FCITOFCO_D  ---     0.146    R19C37C.FCI to    R19C37C.FCO counter/SLICE_10
+ROUTE         1     0.000    R19C37C.FCO to    R19C37D.FCI counter/n48
+FCITOFCO_D  ---     0.146    R19C37D.FCI to    R19C37D.FCO counter/SLICE_9
+ROUTE         1     0.000    R19C37D.FCO to    R19C38A.FCI counter/n49
+FCITOFCO_D  ---     0.146    R19C38A.FCI to    R19C38A.FCO counter/SLICE_8
+ROUTE         1     0.000    R19C38A.FCO to    R19C38B.FCI counter/n50
+FCITOFCO_D  ---     0.146    R19C38B.FCI to    R19C38B.FCO counter/SLICE_7
+ROUTE         1     0.000    R19C38B.FCO to    R19C38C.FCI counter/n51
+FCITOFCO_D  ---     0.146    R19C38C.FCI to    R19C38C.FCO counter/SLICE_6
+ROUTE         1     0.000    R19C38C.FCO to    R19C38D.FCI counter/n52
+FCITOFCO_D  ---     0.146    R19C38D.FCI to    R19C38D.FCO counter/SLICE_5
+ROUTE         1     0.000    R19C38D.FCO to    R19C39A.FCI counter/n53
+FCITOFCO_D  ---     0.146    R19C39A.FCI to    R19C39A.FCO counter/SLICE_4
+ROUTE         1     0.000    R19C39A.FCO to    R19C39B.FCI counter/n54
+FCITOFCO_D  ---     0.146    R19C39B.FCI to    R19C39B.FCO counter/SLICE_3
+ROUTE         1     0.000    R19C39B.FCO to    R19C39C.FCI counter/n55
+FCITOFCO_D  ---     0.146    R19C39C.FCI to    R19C39C.FCO counter/SLICE_2
+ROUTE         1     0.000    R19C39C.FCO to    R19C39D.FCI counter/n56
+FCITOFCO_D  ---     0.146    R19C39D.FCI to    R19C39D.FCO counter/SLICE_1
+ROUTE         1     0.000    R19C39D.FCO to    R19C40A.FCI counter/n57
+FCITOF0_DE  ---     0.517    R19C40A.FCI to     R19C40A.F0 counter/SLICE_0
+ROUTE         1     0.000     R19C40A.F0 to    R19C40A.DI0 counter/n134 (to fpga_clock)
+                  --------
+                    4.308   (86.6% logic, 13.4% route), 16 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path rc_oscillator to counter/SLICE_14:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     3.765        OSC.OSC to    R19C36C.CLK fpga_clock
+                  --------
+                    3.765   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path rc_oscillator to counter/SLICE_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     3.765        OSC.OSC to    R19C40A.CLK fpga_clock
+                  --------
+                    3.765   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 3.128ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              counter/counter_10__i2  (from fpga_clock +)
+   Destination:    FF         Data in        counter/counter_10__i30  (to fpga_clock +)
+
+   Delay:               4.241ns  (86.3% logic, 13.7% route), 16 logic levels.
+
+ Constraint Details:
+
+      4.241ns physical path delay counter/SLICE_15 to counter/SLICE_1 meets
+      7.519ns delay constraint less
+      0.000ns skew and
+      0.150ns DIN_SET requirement (totaling 7.369ns) by 3.128ns
+
+ Physical Path Details:
+
+      Data path counter/SLICE_15 to counter/SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409    R19C36B.CLK to     R19C36B.Q1 counter/SLICE_15 (from fpga_clock)
+ROUTE         1     0.579     R19C36B.Q1 to     R19C36B.A1 counter/n30
+C1TOFCO_DE  ---     0.786     R19C36B.A1 to    R19C36B.FCO counter/SLICE_15
+ROUTE         1     0.000    R19C36B.FCO to    R19C36C.FCI counter/n43
+FCITOFCO_D  ---     0.146    R19C36C.FCI to    R19C36C.FCO counter/SLICE_14
+ROUTE         1     0.000    R19C36C.FCO to    R19C36D.FCI counter/n44
+FCITOFCO_D  ---     0.146    R19C36D.FCI to    R19C36D.FCO counter/SLICE_13
+ROUTE         1     0.000    R19C36D.FCO to    R19C37A.FCI counter/n45
+FCITOFCO_D  ---     0.146    R19C37A.FCI to    R19C37A.FCO counter/SLICE_12
+ROUTE         1     0.000    R19C37A.FCO to    R19C37B.FCI counter/n46
+FCITOFCO_D  ---     0.146    R19C37B.FCI to    R19C37B.FCO counter/SLICE_11
+ROUTE         1     0.000    R19C37B.FCO to    R19C37C.FCI counter/n47
+FCITOFCO_D  ---     0.146    R19C37C.FCI to    R19C37C.FCO counter/SLICE_10
+ROUTE         1     0.000    R19C37C.FCO to    R19C37D.FCI counter/n48
+FCITOFCO_D  ---     0.146    R19C37D.FCI to    R19C37D.FCO counter/SLICE_9
+ROUTE         1     0.000    R19C37D.FCO to    R19C38A.FCI counter/n49
+FCITOFCO_D  ---     0.146    R19C38A.FCI to    R19C38A.FCO counter/SLICE_8
+ROUTE         1     0.000    R19C38A.FCO to    R19C38B.FCI counter/n50
+FCITOFCO_D  ---     0.146    R19C38B.FCI to    R19C38B.FCO counter/SLICE_7
+ROUTE         1     0.000    R19C38B.FCO to    R19C38C.FCI counter/n51
+FCITOFCO_D  ---     0.146    R19C38C.FCI to    R19C38C.FCO counter/SLICE_6
+ROUTE         1     0.000    R19C38C.FCO to    R19C38D.FCI counter/n52
+FCITOFCO_D  ---     0.146    R19C38D.FCI to    R19C38D.FCO counter/SLICE_5
+ROUTE         1     0.000    R19C38D.FCO to    R19C39A.FCI counter/n53
+FCITOFCO_D  ---     0.146    R19C39A.FCI to    R19C39A.FCO counter/SLICE_4
+ROUTE         1     0.000    R19C39A.FCO to    R19C39B.FCI counter/n54
+FCITOFCO_D  ---     0.146    R19C39B.FCI to    R19C39B.FCO counter/SLICE_3
+ROUTE         1     0.000    R19C39B.FCO to    R19C39C.FCI counter/n55
+FCITOFCO_D  ---     0.146    R19C39C.FCI to    R19C39C.FCO counter/SLICE_2
+ROUTE         1     0.000    R19C39C.FCO to    R19C39D.FCI counter/n56
+FCITOF1_DE  ---     0.569    R19C39D.FCI to     R19C39D.F1 counter/SLICE_1
+ROUTE         1     0.000     R19C39D.F1 to    R19C39D.DI1 counter/n135 (to fpga_clock)
+                  --------
+                    4.241   (86.3% logic, 13.7% route), 16 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path rc_oscillator to counter/SLICE_15:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     3.765        OSC.OSC to    R19C36B.CLK fpga_clock
+                  --------
+                    3.765   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path rc_oscillator to counter/SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     3.765        OSC.OSC to    R19C39D.CLK fpga_clock
+                  --------
+                    3.765   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 3.128ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              counter/counter_10__i0  (from fpga_clock +)
+   Destination:    FF         Data in        counter/counter_10__i28  (to fpga_clock +)
+
+   Delay:               4.241ns  (86.3% logic, 13.7% route), 16 logic levels.
+
+ Constraint Details:
+
+      4.241ns physical path delay counter/SLICE_16 to counter/SLICE_2 meets
+      7.519ns delay constraint less
+      0.000ns skew and
+      0.150ns DIN_SET requirement (totaling 7.369ns) by 3.128ns
+
+ Physical Path Details:
+
+      Data path counter/SLICE_16 to counter/SLICE_2:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409    R19C36A.CLK to     R19C36A.Q1 counter/SLICE_16 (from fpga_clock)
+ROUTE         1     0.579     R19C36A.Q1 to     R19C36A.A1 counter/n32
+C1TOFCO_DE  ---     0.786     R19C36A.A1 to    R19C36A.FCO counter/SLICE_16
+ROUTE         1     0.000    R19C36A.FCO to    R19C36B.FCI counter/n42
+FCITOFCO_D  ---     0.146    R19C36B.FCI to    R19C36B.FCO counter/SLICE_15
+ROUTE         1     0.000    R19C36B.FCO to    R19C36C.FCI counter/n43
+FCITOFCO_D  ---     0.146    R19C36C.FCI to    R19C36C.FCO counter/SLICE_14
+ROUTE         1     0.000    R19C36C.FCO to    R19C36D.FCI counter/n44
+FCITOFCO_D  ---     0.146    R19C36D.FCI to    R19C36D.FCO counter/SLICE_13
+ROUTE         1     0.000    R19C36D.FCO to    R19C37A.FCI counter/n45
+FCITOFCO_D  ---     0.146    R19C37A.FCI to    R19C37A.FCO counter/SLICE_12
+ROUTE         1     0.000    R19C37A.FCO to    R19C37B.FCI counter/n46
+FCITOFCO_D  ---     0.146    R19C37B.FCI to    R19C37B.FCO counter/SLICE_11
+ROUTE         1     0.000    R19C37B.FCO to    R19C37C.FCI counter/n47
+FCITOFCO_D  ---     0.146    R19C37C.FCI to    R19C37C.FCO counter/SLICE_10
+ROUTE         1     0.000    R19C37C.FCO to    R19C37D.FCI counter/n48
+FCITOFCO_D  ---     0.146    R19C37D.FCI to    R19C37D.FCO counter/SLICE_9
+ROUTE         1     0.000    R19C37D.FCO to    R19C38A.FCI counter/n49
+FCITOFCO_D  ---     0.146    R19C38A.FCI to    R19C38A.FCO counter/SLICE_8
+ROUTE         1     0.000    R19C38A.FCO to    R19C38B.FCI counter/n50
+FCITOFCO_D  ---     0.146    R19C38B.FCI to    R19C38B.FCO counter/SLICE_7
+ROUTE         1     0.000    R19C38B.FCO to    R19C38C.FCI counter/n51
+FCITOFCO_D  ---     0.146    R19C38C.FCI to    R19C38C.FCO counter/SLICE_6
+ROUTE         1     0.000    R19C38C.FCO to    R19C38D.FCI counter/n52
+FCITOFCO_D  ---     0.146    R19C38D.FCI to    R19C38D.FCO counter/SLICE_5
+ROUTE         1     0.000    R19C38D.FCO to    R19C39A.FCI counter/n53
+FCITOFCO_D  ---     0.146    R19C39A.FCI to    R19C39A.FCO counter/SLICE_4
+ROUTE         1     0.000    R19C39A.FCO to    R19C39B.FCI counter/n54
+FCITOFCO_D  ---     0.146    R19C39B.FCI to    R19C39B.FCO counter/SLICE_3
+ROUTE         1     0.000    R19C39B.FCO to    R19C39C.FCI counter/n55
+FCITOF1_DE  ---     0.569    R19C39C.FCI to     R19C39C.F1 counter/SLICE_2
+ROUTE         1     0.000     R19C39C.F1 to    R19C39C.DI1 counter/n137 (to fpga_clock)
+                  --------
+                    4.241   (86.3% logic, 13.7% route), 16 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path rc_oscillator to counter/SLICE_16:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     3.765        OSC.OSC to    R19C36A.CLK fpga_clock
+                  --------
+                    3.765   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path rc_oscillator to counter/SLICE_2:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     3.765        OSC.OSC to    R19C39C.CLK fpga_clock
+                  --------
+                    3.765   (0.0% logic, 100.0% route), 0 logic levels.
+
+Report:  215.936MHz is the maximum frequency for this preference.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "fpga_clock" 133.000000   |             |             |
+MHz ;                                   |  133.000 MHz|  215.936 MHz|  18  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 1 clocks:
+
+Clock Domain: fpga_clock   Source: rc_oscillator.OSC   Loads: 21
+   Covered under: FREQUENCY NET "fpga_clock" 133.000000 MHz ;
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 536 paths, 1 nets, and 125 connections (85.62% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.11.1.441
+Sat Jan 04 15:25:05 2020
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 5 -sphld m -o HelloWorld_impl1.twr -gui -msgset D:/docs/FPGA/HelloWorld/promote.xml HelloWorld_impl1.ncd HelloWorld_impl1.prf 
+Design file:     helloworld_impl1.ncd
+Preference file: helloworld_impl1.prf
+Device,speed:    LCMXO3LF-6900C,m
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY NET "fpga_clock" 133.000000 MHz ;
+            536 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.377ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              counter/counter_10__i13  (from fpga_clock +)
+   Destination:    FF         Data in        counter/counter_10__i13  (to fpga_clock +)
+
+   Delay:               0.364ns  (64.3% logic, 35.7% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.364ns physical path delay counter/SLICE_9 to counter/SLICE_9 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.377ns
+
+ Physical Path Details:
+
+      Data path counter/SLICE_9 to counter/SLICE_9:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R19C37D.CLK to     R19C37D.Q0 counter/SLICE_9 (from fpga_clock)
+ROUTE         1     0.130     R19C37D.Q0 to     R19C37D.A0 counter/n19
+CTOF_DEL    ---     0.101     R19C37D.A0 to     R19C37D.F0 counter/SLICE_9
+ROUTE         1     0.000     R19C37D.F0 to    R19C37D.DI0 counter/n152 (to fpga_clock)
+                  --------
+                    0.364   (64.3% logic, 35.7% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path rc_oscillator to counter/SLICE_9:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     1.443        OSC.OSC to    R19C37D.CLK fpga_clock
+                  --------
+                    1.443   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path rc_oscillator to counter/SLICE_9:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     1.443        OSC.OSC to    R19C37D.CLK fpga_clock
+                  --------
+                    1.443   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.377ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              counter/counter_10__i17  (from fpga_clock +)
+   Destination:    FF         Data in        counter/counter_10__i17  (to fpga_clock +)
+
+   Delay:               0.364ns  (64.3% logic, 35.7% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.364ns physical path delay counter/SLICE_7 to counter/SLICE_7 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.377ns
+
+ Physical Path Details:
+
+      Data path counter/SLICE_7 to counter/SLICE_7:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R19C38B.CLK to     R19C38B.Q0 counter/SLICE_7 (from fpga_clock)
+ROUTE         1     0.130     R19C38B.Q0 to     R19C38B.A0 counter/n15
+CTOF_DEL    ---     0.101     R19C38B.A0 to     R19C38B.F0 counter/SLICE_7
+ROUTE         1     0.000     R19C38B.F0 to    R19C38B.DI0 counter/n148 (to fpga_clock)
+                  --------
+                    0.364   (64.3% logic, 35.7% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path rc_oscillator to counter/SLICE_7:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     1.443        OSC.OSC to    R19C38B.CLK fpga_clock
+                  --------
+                    1.443   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path rc_oscillator to counter/SLICE_7:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     1.443        OSC.OSC to    R19C38B.CLK fpga_clock
+                  --------
+                    1.443   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.377ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              counter/counter_10__i21  (from fpga_clock +)
+   Destination:    FF         Data in        counter/counter_10__i21  (to fpga_clock +)
+
+   Delay:               0.364ns  (64.3% logic, 35.7% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.364ns physical path delay counter/SLICE_5 to counter/SLICE_5 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.377ns
+
+ Physical Path Details:
+
+      Data path counter/SLICE_5 to counter/SLICE_5:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R19C38D.CLK to     R19C38D.Q0 counter/SLICE_5 (from fpga_clock)
+ROUTE         1     0.130     R19C38D.Q0 to     R19C38D.A0 counter/n11
+CTOF_DEL    ---     0.101     R19C38D.A0 to     R19C38D.F0 counter/SLICE_5
+ROUTE         1     0.000     R19C38D.F0 to    R19C38D.DI0 counter/n144 (to fpga_clock)
+                  --------
+                    0.364   (64.3% logic, 35.7% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path rc_oscillator to counter/SLICE_5:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     1.443        OSC.OSC to    R19C38D.CLK fpga_clock
+                  --------
+                    1.443   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path rc_oscillator to counter/SLICE_5:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     1.443        OSC.OSC to    R19C38D.CLK fpga_clock
+                  --------
+                    1.443   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.377ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              counter/counter_10__i20  (from fpga_clock +)
+   Destination:    FF         Data in        counter/counter_10__i20  (to fpga_clock +)
+
+   Delay:               0.364ns  (64.3% logic, 35.7% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.364ns physical path delay counter/SLICE_6 to counter/SLICE_6 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.377ns
+
+ Physical Path Details:
+
+      Data path counter/SLICE_6 to counter/SLICE_6:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R19C38C.CLK to     R19C38C.Q1 counter/SLICE_6 (from fpga_clock)
+ROUTE         1     0.130     R19C38C.Q1 to     R19C38C.A1 counter/n12
+CTOF_DEL    ---     0.101     R19C38C.A1 to     R19C38C.F1 counter/SLICE_6
+ROUTE         1     0.000     R19C38C.F1 to    R19C38C.DI1 counter/n145 (to fpga_clock)
+                  --------
+                    0.364   (64.3% logic, 35.7% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path rc_oscillator to counter/SLICE_6:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     1.443        OSC.OSC to    R19C38C.CLK fpga_clock
+                  --------
+                    1.443   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path rc_oscillator to counter/SLICE_6:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     1.443        OSC.OSC to    R19C38C.CLK fpga_clock
+                  --------
+                    1.443   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.377ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              counter/counter_10__i19  (from fpga_clock +)
+   Destination:    FF         Data in        counter/counter_10__i19  (to fpga_clock +)
+
+   Delay:               0.364ns  (64.3% logic, 35.7% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.364ns physical path delay counter/SLICE_6 to counter/SLICE_6 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.377ns
+
+ Physical Path Details:
+
+      Data path counter/SLICE_6 to counter/SLICE_6:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R19C38C.CLK to     R19C38C.Q0 counter/SLICE_6 (from fpga_clock)
+ROUTE         1     0.130     R19C38C.Q0 to     R19C38C.A0 counter/n13
+CTOF_DEL    ---     0.101     R19C38C.A0 to     R19C38C.F0 counter/SLICE_6
+ROUTE         1     0.000     R19C38C.F0 to    R19C38C.DI0 counter/n146 (to fpga_clock)
+                  --------
+                    0.364   (64.3% logic, 35.7% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path rc_oscillator to counter/SLICE_6:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     1.443        OSC.OSC to    R19C38C.CLK fpga_clock
+                  --------
+                    1.443   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path rc_oscillator to counter/SLICE_6:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     1.443        OSC.OSC to    R19C38C.CLK fpga_clock
+                  --------
+                    1.443   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.377ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              counter/counter_10__i15  (from fpga_clock +)
+   Destination:    FF         Data in        counter/counter_10__i15  (to fpga_clock +)
+
+   Delay:               0.364ns  (64.3% logic, 35.7% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.364ns physical path delay counter/SLICE_8 to counter/SLICE_8 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.377ns
+
+ Physical Path Details:
+
+      Data path counter/SLICE_8 to counter/SLICE_8:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R19C38A.CLK to     R19C38A.Q0 counter/SLICE_8 (from fpga_clock)
+ROUTE         1     0.130     R19C38A.Q0 to     R19C38A.A0 counter/n17
+CTOF_DEL    ---     0.101     R19C38A.A0 to     R19C38A.F0 counter/SLICE_8
+ROUTE         1     0.000     R19C38A.F0 to    R19C38A.DI0 counter/n150 (to fpga_clock)
+                  --------
+                    0.364   (64.3% logic, 35.7% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path rc_oscillator to counter/SLICE_8:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     1.443        OSC.OSC to    R19C38A.CLK fpga_clock
+                  --------
+                    1.443   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path rc_oscillator to counter/SLICE_8:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     1.443        OSC.OSC to    R19C38A.CLK fpga_clock
+                  --------
+                    1.443   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.377ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              counter/counter_10__i3  (from fpga_clock +)
+   Destination:    FF         Data in        counter/counter_10__i3  (to fpga_clock +)
+
+   Delay:               0.364ns  (64.3% logic, 35.7% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.364ns physical path delay counter/SLICE_14 to counter/SLICE_14 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.377ns
+
+ Physical Path Details:
+
+      Data path counter/SLICE_14 to counter/SLICE_14:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R19C36C.CLK to     R19C36C.Q0 counter/SLICE_14 (from fpga_clock)
+ROUTE         1     0.130     R19C36C.Q0 to     R19C36C.A0 counter/n29
+CTOF_DEL    ---     0.101     R19C36C.A0 to     R19C36C.F0 counter/SLICE_14
+ROUTE         1     0.000     R19C36C.F0 to    R19C36C.DI0 counter/n162 (to fpga_clock)
+                  --------
+                    0.364   (64.3% logic, 35.7% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path rc_oscillator to counter/SLICE_14:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     1.443        OSC.OSC to    R19C36C.CLK fpga_clock
+                  --------
+                    1.443   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path rc_oscillator to counter/SLICE_14:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     1.443        OSC.OSC to    R19C36C.CLK fpga_clock
+                  --------
+                    1.443   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.377ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              counter/counter_10__i23  (from fpga_clock +)
+   Destination:    FF         Data in        counter/counter_10__i23  (to fpga_clock +)
+
+   Delay:               0.364ns  (64.3% logic, 35.7% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.364ns physical path delay counter/SLICE_4 to counter/SLICE_4 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.377ns
+
+ Physical Path Details:
+
+      Data path counter/SLICE_4 to counter/SLICE_4:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R19C39A.CLK to     R19C39A.Q0 counter/SLICE_4 (from fpga_clock)
+ROUTE         1     0.130     R19C39A.Q0 to     R19C39A.A0 counter/n9
+CTOF_DEL    ---     0.101     R19C39A.A0 to     R19C39A.F0 counter/SLICE_4
+ROUTE         1     0.000     R19C39A.F0 to    R19C39A.DI0 counter/n142 (to fpga_clock)
+                  --------
+                    0.364   (64.3% logic, 35.7% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path rc_oscillator to counter/SLICE_4:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     1.443        OSC.OSC to    R19C39A.CLK fpga_clock
+                  --------
+                    1.443   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path rc_oscillator to counter/SLICE_4:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     1.443        OSC.OSC to    R19C39A.CLK fpga_clock
+                  --------
+                    1.443   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.377ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              counter/counter_10__i7  (from fpga_clock +)
+   Destination:    FF         Data in        counter/counter_10__i7  (to fpga_clock +)
+
+   Delay:               0.364ns  (64.3% logic, 35.7% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.364ns physical path delay counter/SLICE_12 to counter/SLICE_12 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.377ns
+
+ Physical Path Details:
+
+      Data path counter/SLICE_12 to counter/SLICE_12:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R19C37A.CLK to     R19C37A.Q0 counter/SLICE_12 (from fpga_clock)
+ROUTE         1     0.130     R19C37A.Q0 to     R19C37A.A0 counter/n25
+CTOF_DEL    ---     0.101     R19C37A.A0 to     R19C37A.F0 counter/SLICE_12
+ROUTE         1     0.000     R19C37A.F0 to    R19C37A.DI0 counter/n158 (to fpga_clock)
+                  --------
+                    0.364   (64.3% logic, 35.7% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path rc_oscillator to counter/SLICE_12:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     1.443        OSC.OSC to    R19C37A.CLK fpga_clock
+                  --------
+                    1.443   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path rc_oscillator to counter/SLICE_12:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     1.443        OSC.OSC to    R19C37A.CLK fpga_clock
+                  --------
+                    1.443   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.377ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              counter/counter_10__i11  (from fpga_clock +)
+   Destination:    FF         Data in        counter/counter_10__i11  (to fpga_clock +)
+
+   Delay:               0.364ns  (64.3% logic, 35.7% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.364ns physical path delay counter/SLICE_10 to counter/SLICE_10 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.377ns
+
+ Physical Path Details:
+
+      Data path counter/SLICE_10 to counter/SLICE_10:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R19C37C.CLK to     R19C37C.Q0 counter/SLICE_10 (from fpga_clock)
+ROUTE         1     0.130     R19C37C.Q0 to     R19C37C.A0 counter/n21
+CTOF_DEL    ---     0.101     R19C37C.A0 to     R19C37C.F0 counter/SLICE_10
+ROUTE         1     0.000     R19C37C.F0 to    R19C37C.DI0 counter/n154 (to fpga_clock)
+                  --------
+                    0.364   (64.3% logic, 35.7% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path rc_oscillator to counter/SLICE_10:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     1.443        OSC.OSC to    R19C37C.CLK fpga_clock
+                  --------
+                    1.443   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path rc_oscillator to counter/SLICE_10:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        21     1.443        OSC.OSC to    R19C37C.CLK fpga_clock
+                  --------
+                    1.443   (0.0% logic, 100.0% route), 0 logic levels.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "fpga_clock" 133.000000   |             |             |
+MHz ;                                   |     0.000 ns|     0.377 ns|   2  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 1 clocks:
+
+Clock Domain: fpga_clock   Source: rc_oscillator.OSC   Loads: 21
+   Covered under: FREQUENCY NET "fpga_clock" 133.000000 MHz ;
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 536 paths, 1 nets, and 125 connections (85.62% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+

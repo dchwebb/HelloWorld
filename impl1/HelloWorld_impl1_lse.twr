@@ -1,0 +1,279 @@
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Fri Jan 03 17:42:26 2020
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Design:     top
+Constraint file:  
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk0 [get_nets fpga_clock]
+            551 items scored, 61 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 0.886ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3AX    CK             \counter/counter_10__i0  (from fpga_clock +)
+   Destination:    FD1P3AX    D              \counter/counter_10__i31  (to fpga_clock +)
+
+   Delay:                   5.740ns  (67.0% logic, 33.0% route), 18 logic levels.
+
+ Constraint Details:
+
+      5.740ns data_path \counter/counter_10__i0 to \counter/counter_10__i31 violates
+      5.000ns delay constraint less
+      0.146ns L_S requirement (totaling 4.854ns) by 0.886ns
+
+ Path Details: \counter/counter_10__i0 to \counter/counter_10__i31
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.403             CK to Q              \counter/counter_10__i0 (from fpga_clock)
+Route         1   e 0.788                                  \counter/n32
+A1_TO_FCO   ---     0.752           A[2] to COUT           \counter/counter_10_add_4_1
+Route         1   e 0.020                                  \counter/n42
+FCI_TO_FCO  ---     0.143            CIN to COUT           \counter/counter_10_add_4_3
+Route         1   e 0.020                                  \counter/n43
+FCI_TO_FCO  ---     0.143            CIN to COUT           \counter/counter_10_add_4_5
+Route         1   e 0.020                                  \counter/n44
+FCI_TO_FCO  ---     0.143            CIN to COUT           \counter/counter_10_add_4_7
+Route         1   e 0.020                                  \counter/n45
+FCI_TO_FCO  ---     0.143            CIN to COUT           \counter/counter_10_add_4_9
+Route         1   e 0.020                                  \counter/n46
+FCI_TO_FCO  ---     0.143            CIN to COUT           \counter/counter_10_add_4_11
+Route         1   e 0.020                                  \counter/n47
+FCI_TO_FCO  ---     0.143            CIN to COUT           \counter/counter_10_add_4_13
+Route         1   e 0.020                                  \counter/n48
+FCI_TO_FCO  ---     0.143            CIN to COUT           \counter/counter_10_add_4_15
+Route         1   e 0.020                                  \counter/n49
+FCI_TO_FCO  ---     0.143            CIN to COUT           \counter/counter_10_add_4_17
+Route         1   e 0.020                                  \counter/n50
+FCI_TO_FCO  ---     0.143            CIN to COUT           \counter/counter_10_add_4_19
+Route         1   e 0.020                                  \counter/n51
+FCI_TO_FCO  ---     0.143            CIN to COUT           \counter/counter_10_add_4_21
+Route         1   e 0.020                                  \counter/n52
+FCI_TO_FCO  ---     0.143            CIN to COUT           \counter/counter_10_add_4_23
+Route         1   e 0.020                                  \counter/n53
+FCI_TO_FCO  ---     0.143            CIN to COUT           \counter/counter_10_add_4_25
+Route         1   e 0.020                                  \counter/n54
+FCI_TO_FCO  ---     0.143            CIN to COUT           \counter/counter_10_add_4_27
+Route         1   e 0.020                                  \counter/n55
+FCI_TO_FCO  ---     0.143            CIN to COUT           \counter/counter_10_add_4_29
+Route         1   e 0.020                                  \counter/n56
+FCI_TO_FCO  ---     0.143            CIN to COUT           \counter/counter_10_add_4_31
+Route         1   e 0.020                                  \counter/n57
+FCI_TO_F    ---     0.544            CIN to S[2]           \counter/counter_10_add_4_33
+Route         1   e 0.788                                  \counter/n134
+                  --------
+                    5.740  (67.0% logic, 33.0% route), 18 logic levels.
+
+
+Error:  The following path violates requirements by 0.723ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3AX    CK             \counter/counter_10__i0  (from fpga_clock +)
+   Destination:    FD1P3AX    D              \counter/counter_10__i30  (to fpga_clock +)
+
+   Delay:                   5.577ns  (66.4% logic, 33.6% route), 17 logic levels.
+
+ Constraint Details:
+
+      5.577ns data_path \counter/counter_10__i0 to \counter/counter_10__i30 violates
+      5.000ns delay constraint less
+      0.146ns L_S requirement (totaling 4.854ns) by 0.723ns
+
+ Path Details: \counter/counter_10__i0 to \counter/counter_10__i30
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.403             CK to Q              \counter/counter_10__i0 (from fpga_clock)
+Route         1   e 0.788                                  \counter/n32
+A1_TO_FCO   ---     0.752           A[2] to COUT           \counter/counter_10_add_4_1
+Route         1   e 0.020                                  \counter/n42
+FCI_TO_FCO  ---     0.143            CIN to COUT           \counter/counter_10_add_4_3
+Route         1   e 0.020                                  \counter/n43
+FCI_TO_FCO  ---     0.143            CIN to COUT           \counter/counter_10_add_4_5
+Route         1   e 0.020                                  \counter/n44
+FCI_TO_FCO  ---     0.143            CIN to COUT           \counter/counter_10_add_4_7
+Route         1   e 0.020                                  \counter/n45
+FCI_TO_FCO  ---     0.143            CIN to COUT           \counter/counter_10_add_4_9
+Route         1   e 0.020                                  \counter/n46
+FCI_TO_FCO  ---     0.143            CIN to COUT           \counter/counter_10_add_4_11
+Route         1   e 0.020                                  \counter/n47
+FCI_TO_FCO  ---     0.143            CIN to COUT           \counter/counter_10_add_4_13
+Route         1   e 0.020                                  \counter/n48
+FCI_TO_FCO  ---     0.143            CIN to COUT           \counter/counter_10_add_4_15
+Route         1   e 0.020                                  \counter/n49
+FCI_TO_FCO  ---     0.143            CIN to COUT           \counter/counter_10_add_4_17
+Route         1   e 0.020                                  \counter/n50
+FCI_TO_FCO  ---     0.143            CIN to COUT           \counter/counter_10_add_4_19
+Route         1   e 0.020                                  \counter/n51
+FCI_TO_FCO  ---     0.143            CIN to COUT           \counter/counter_10_add_4_21
+Route         1   e 0.020                                  \counter/n52
+FCI_TO_FCO  ---     0.143            CIN to COUT           \counter/counter_10_add_4_23
+Route         1   e 0.020                                  \counter/n53
+FCI_TO_FCO  ---     0.143            CIN to COUT           \counter/counter_10_add_4_25
+Route         1   e 0.020                                  \counter/n54
+FCI_TO_FCO  ---     0.143            CIN to COUT           \counter/counter_10_add_4_27
+Route         1   e 0.020                                  \counter/n55
+FCI_TO_FCO  ---     0.143            CIN to COUT           \counter/counter_10_add_4_29
+Route         1   e 0.020                                  \counter/n56
+FCI_TO_F    ---     0.544            CIN to S[2]           \counter/counter_10_add_4_31
+Route         1   e 0.788                                  \counter/n135
+                  --------
+                    5.577  (66.4% logic, 33.6% route), 17 logic levels.
+
+
+Error:  The following path violates requirements by 0.723ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3AX    CK             \counter/counter_10__i0  (from fpga_clock +)
+   Destination:    FD1P3AX    D              \counter/counter_10__i29  (to fpga_clock +)
+
+   Delay:                   5.577ns  (66.4% logic, 33.6% route), 17 logic levels.
+
+ Constraint Details:
+
+      5.577ns data_path \counter/counter_10__i0 to \counter/counter_10__i29 violates
+      5.000ns delay constraint less
+      0.146ns L_S requirement (totaling 4.854ns) by 0.723ns
+
+ Path Details: \counter/counter_10__i0 to \counter/counter_10__i29
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.403             CK to Q              \counter/counter_10__i0 (from fpga_clock)
+Route         1   e 0.788                                  \counter/n32
+A1_TO_FCO   ---     0.752           A[2] to COUT           \counter/counter_10_add_4_1
+Route         1   e 0.020                                  \counter/n42
+FCI_TO_FCO  ---     0.143            CIN to COUT           \counter/counter_10_add_4_3
+Route         1   e 0.020                                  \counter/n43
+FCI_TO_FCO  ---     0.143            CIN to COUT           \counter/counter_10_add_4_5
+Route         1   e 0.020                                  \counter/n44
+FCI_TO_FCO  ---     0.143            CIN to COUT           \counter/counter_10_add_4_7
+Route         1   e 0.020                                  \counter/n45
+FCI_TO_FCO  ---     0.143            CIN to COUT           \counter/counter_10_add_4_9
+Route         1   e 0.020                                  \counter/n46
+FCI_TO_FCO  ---     0.143            CIN to COUT           \counter/counter_10_add_4_11
+Route         1   e 0.020                                  \counter/n47
+FCI_TO_FCO  ---     0.143            CIN to COUT           \counter/counter_10_add_4_13
+Route         1   e 0.020                                  \counter/n48
+FCI_TO_FCO  ---     0.143            CIN to COUT           \counter/counter_10_add_4_15
+Route         1   e 0.020                                  \counter/n49
+FCI_TO_FCO  ---     0.143            CIN to COUT           \counter/counter_10_add_4_17
+Route         1   e 0.020                                  \counter/n50
+FCI_TO_FCO  ---     0.143            CIN to COUT           \counter/counter_10_add_4_19
+Route         1   e 0.020                                  \counter/n51
+FCI_TO_FCO  ---     0.143            CIN to COUT           \counter/counter_10_add_4_21
+Route         1   e 0.020                                  \counter/n52
+FCI_TO_FCO  ---     0.143            CIN to COUT           \counter/counter_10_add_4_23
+Route         1   e 0.020                                  \counter/n53
+FCI_TO_FCO  ---     0.143            CIN to COUT           \counter/counter_10_add_4_25
+Route         1   e 0.020                                  \counter/n54
+FCI_TO_FCO  ---     0.143            CIN to COUT           \counter/counter_10_add_4_27
+Route         1   e 0.020                                  \counter/n55
+FCI_TO_FCO  ---     0.143            CIN to COUT           \counter/counter_10_add_4_29
+Route         1   e 0.020                                  \counter/n56
+FCI_TO_F    ---     0.544            CIN to S[2]           \counter/counter_10_add_4_31
+Route         1   e 0.788                                  \counter/n136
+                  --------
+                    5.577  (66.4% logic, 33.6% route), 17 logic levels.
+
+Warning: 5.886 ns is the maximum delay for this constraint.
+
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets fpga_clock]              |     5.000 ns|     5.886 ns|    18 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+\counter/n47                            |       1|      61|     99.00%
+                                        |        |        |
+\counter/n48                            |       1|      61|     99.00%
+                                        |        |        |
+\counter/n49                            |       1|      61|     99.00%
+                                        |        |        |
+\counter/n50                            |       1|      61|     99.00%
+                                        |        |        |
+\counter/n51                            |       1|      61|     99.00%
+                                        |        |        |
+\counter/n52                            |       1|      61|     99.00%
+                                        |        |        |
+\counter/n46                            |       1|      59|     96.72%
+                                        |        |        |
+\counter/n53                            |       1|      59|     96.72%
+                                        |        |        |
+\counter/n45                            |       1|      53|     86.89%
+                                        |        |        |
+\counter/n54                            |       1|      53|     86.89%
+                                        |        |        |
+\counter/n44                            |       1|      43|     70.49%
+                                        |        |        |
+\counter/n55                            |       1|      43|     70.49%
+                                        |        |        |
+\counter/n43                            |       1|      29|     47.54%
+                                        |        |        |
+\counter/n56                            |       1|      29|     47.54%
+                                        |        |        |
+\counter/n32                            |       1|      11|     18.03%
+                                        |        |        |
+\counter/n42                            |       1|      11|     18.03%
+                                        |        |        |
+\counter/n57                            |       1|      11|     18.03%
+                                        |        |        |
+\counter/n134                           |       1|      11|     18.03%
+                                        |        |        |
+\counter/n30                            |       1|       9|     14.75%
+                                        |        |        |
+\counter/n31                            |       1|       9|     14.75%
+                                        |        |        |
+\counter/n135                           |       1|       9|     14.75%
+                                        |        |        |
+\counter/n136                           |       1|       9|     14.75%
+                                        |        |        |
+\counter/n28                            |       1|       7|     11.48%
+                                        |        |        |
+\counter/n29                            |       1|       7|     11.48%
+                                        |        |        |
+\counter/n137                           |       1|       7|     11.48%
+                                        |        |        |
+\counter/n138                           |       1|       7|     11.48%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+Timing summary:
+---------------
+
+Timing errors: 61  Score: 18186
+
+Constraints cover  551 paths, 89 nets, and 136 connections (73.9% coverage)
+
+
+Peak memory: 60723200 bytes, TRCE: 2396160 bytes, DLYMAN: 0 bytes
+CPU_TIME_REPORT: 0 secs 

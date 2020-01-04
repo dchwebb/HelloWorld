@@ -1,0 +1,6 @@
+
+
+-g RamCfg:Reset
+
+-path "D:/docs/FPGA/HelloWorld"  
+-g MIGRATION:ON

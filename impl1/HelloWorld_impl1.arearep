@@ -1,0 +1,27 @@
+----------------------------------------------------------------------
+Report for cell top.TECH
+Register bits:  40 of 7485 (0.534%)
+I/O cells:      9
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        17          100.0
+                            FD1P3AX        32          100.0
+                            FD1P3AY         8          100.0
+                                GSR         1          100.0
+                                 IB         1          100.0
+                               LUT4         8          100.0
+                                 OB         8          100.0
+                               OSCH         1          100.0
+SUB MODULES
+                       slow_counter         1
+                              TOTAL        77
+----------------------------------------------------------------------
+Report for cell slow_counter.v1
+Instance Path : counter
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        17          100.0
+                            FD1P3AX        32          100.0
+                            FD1P3AY         8          100.0
+                               LUT4         8          100.0
+                              TOTAL        65
